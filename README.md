@@ -1,20 +1,20 @@
-# A Byte of Vim
+# Un octet de Vim
 
-"A Byte of Vim" is a book which aims to help you to learn how to use the [Vim editor](http://www.vim.org) (version 7), even if all you know is how to use the computer keyboard.
+"Un octet de Vim" est un livre qui a pour but de vous aider à apprendre à utiliser [l'éditeur Vim](http://www.vim.org) (version 7), même si tout ce que vous savez c'est comment utiliser un clavier d'ordinateur.
 
-The first part of this book is meant for new users who want to understand what Vim is and learn how to use it.
+La première partie de ce livre s'adresse aux nouveaux utilisateurs qui veulent comprendre ce qu'est Vim et apprendre comment l'utiliser.
 
-The second part of this book is for people who already know how to use Vim and want to learn about features that make Vim so powerful, such as windows and tabs, personal information management, making it a programmer's editor, how to extend Vim with your own plugins, and more.
+La deuxième partie de ce livre s'adresse aux personnes qui savent déjà utiliser Vim et qui veulent en savoir plus sur les fonctionnalités qui rendent Vim si puissant: fenêtres et onglets, gestion des informations personnelles, comment en faire un éditeur de programmation, comment étendre Vim avec propres plugins, et plus encore.
 
-## Status: Incomplete
+## État: Incomplet
 
-Please note that the conversion of the book to this Markdown sources is *incomplete*!
+Veuillez noter que la conversion du livre à ces fichiers sources Markdown est *incomplète*!
 
-The original PDF is at http://files.swaroopch.com/vim/byte_of_vim_v051.pdf - unfortunately the original sources are lost.
+Le fichier PDF d'origine se trouve sur http://files.swaroopch.com/vim/byte_of_vim_v051.pdf - malheureusement, les sources d'origine sont perdues.
 
-I welcome your contributions to complete the porting of text from the original PDF to this new book's sources at https://github.com/swaroopch/byte-of-vim .
+Je me réjouis de vos contributions pour compléter le portage du texte du PDF original aux sources de ce nouveau livre à https://github.com/swaroopch/byte-of-vim.
 
-## Who reads A Byte of Vim? {#who-reads}
+## Qui lit Un octet de Vim? {#who-reads}
 
 > Thanks to A Byte of Vim, I have learnt how to use vim. Thank you very much for this excellent book! ;)
 > -- Camille L (France)
@@ -90,44 +90,46 @@ I welcome your contributions to complete the porting of text from the original P
 > A Byte of Vim saved my day once again...
 > -- [@reku](http://twitter.com/reku/status/14579836693)
 
-Also:
+Aussi:
 
-- The book was listed as the top tip for Dec 2008 on the [Official Vim Tips wiki](http://vim.wikia.com/wiki/Main_Page#Did_you_know.3F_view_archive).
+- Le livre a été listé comme le meilleur conseil pour décembre 2008 sur le [wiki officiel de Vim Tips](http://vim.wikia.com/wiki/Main_Page#Did_you_know.3F_view_archive).
 
-## License
+## Licence
 
-This book is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+Ce livre est sous licence [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
 
-This means:
+Ça signifie que:
 
-- You are free to Share i.e. to copy, distribute and transmit this book
-- You are free to Remix i.e. to make changes to this book (especially translations)
-- You are free to use it for commercial purposes
+- Vous êtes libre de Partager, c'est-à-dire de copier, de distribuer et de transmettre ce livre
+- Vous êtes libre de Modifier, c'est-à-dire d'apporter des modifications à ce livre (en particulier des traductions)
+- Vous êtes libre de l'utiliser à des fins commerciales
 
-Please note:
+Veuilez noter:
 
-- Please do *not* sell electronic or printed copies of the book unless you have clearly and prominently mentioned in the description that these copies are *not* from the original author of this book.
-- Attribution *must* be shown in the introductory description and front page of the document by linking back to {{ book.officialUrl }} and clearly indicating that the original text can be fetched from this location.
-- All the code/scripts provided in this book is licensed under the [3-clause BSD License](http://www.opensource.org/licenses/bsd-license.php) unless otherwise noted.
+- De ne *pas* vendre des copies électroniques ou imprimées du livre à moins d'avoir explicitement et distinctement mentionné dans la description que ces copies ne sont *pas* de l'auteur original de ce livre.
+- L'attribution *doit* apparaître dans la description introductive et sur la page de couverture du document en renvoyant à {{ book.officialUrl }} et en indiquant clairement que le texte original peut être récupéré à cet emplacement.
+- Tous les codes/scripts fournis dans ce livre sont sous licence [BSD à 3 clauses] (http://www.opensource.org/licenses/bsd-license.php) sauf mention contraire.
 
-## Read Now
+## Place à la lecture
 
+Vous pouvez le lire en ligne à {{ book.officialUrl }}
 You can read it online at {{ book.officialUrl }}
 
-## Buy The Book
+## Acheter le livre
 
+Une copie imprimée du livre peut être achetée à {{ book.buyBookUrl }} pour votre plaisir de lecture hors ligne, et pour soutenir le développement continu et l'amélioration de ce livre.
 A printed hardcopy of the book can be purchased at {{ book.buyBookUrl }} for your offline reading pleasure, and to support the continued development and improvement of this book.
 
-## Download
+## Télécharger
 
-Visit {{ book.downloadUrl }} for the following types of downloads:
+Visitez {{ book.downloadUrl }} pour les types de téléchargements suivants:
 
-- [PDF (for desktop reading, etc.)](https://www.gitbook.com/download/pdf/book/swaroopch/byte-of-vim)
-- [EPUB (for iPhone/iPad, ebook readers, etc.)](https://www.gitbook.com/download/epub/book/swaroopch/byte-of-vim)
-- [Mobi (for Kindle)](https://www.gitbook.com/download/mobi/book/swaroopch/byte-of-vim)
+- [PDF (pour la lecture sur PC, au bureau, etc.)](https://www.gitbook.com/download/pdf/book/swaroopch/byte-of-vim)
+- [EPUB (pour les liseuses iPhone/iPad, ebooks, etc.)](https://www.gitbook.com/download/epub/book/swaroopch/byte-of-vim)
+- [Mobi (pour Kindle)](https://www.gitbook.com/download/mobi/book/swaroopch/byte-of-vim)
 
-Visit {{ book.sourceUrl }} for the raw content (for suggesting corrections, changes, translating, etc.)
+Visitez {{ book.sourceUrl }} pour le contenu brut (pour suggérer des corrections, des changements, des traductions, etc.)
 
-## Read the book in your native language
+## Lisez le livre dans votre langue maternelle
 
-If you are interested in reading or contributing translations of this book to other human languages, please see "Translations" chapter.
+Si vous êtes intéressé par la lecture ou la contribution aux traductions de ce livre en d'autres langues, veuillez consulter le chapitre "Traductions".
