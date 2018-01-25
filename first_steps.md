@@ -1,82 +1,85 @@
-# First Steps
+# Premières Étapes
 
-## Starting Vim
+## Démarrer Vim
 
-First step is, of course, to learn how to start Vim.
+La première étape est, bien sûr, d'apprendre à démarrer Vim.
 
-### Graphical Version
-
-#### Windows
-
-Click on Start &rarr; Programs &rarr; Vim 7 &rarr; gVim.
-
-#### Mac OS X
-
-Click on Finder &rarr; Applications &rarr; MacVim.
-
-#### Linux / BSD
-
-Click on Applications &rarr; Accessories &rarr; GVim Text Editor, or press `Alt+F2`, type `gvim` and press the `enter` key.
-
-### Terminal version
+### Graphiquement
 
 #### Windows
 
-Click on Start &rarr; Run, type `vim` and press the `enter` key.
+Cliquez sur Démarrer &rarr; Programmes &rarr; Vim 7 &rarr; gVim.
 
 #### Mac OS X
 
-Click on Finder &rarr; Applications &rarr; Utilities &rarr; Terminal, type `vim` and press the `enter` key.
+Cliquez sur Finder &rarr; Applications &rarr; MacVim.
 
 #### Linux / BSD
 
-Click on Applications &rarr; Accessories &rarr; Terminal, or press `Alt+F2`, type `konsole`/`gnome-terminal` and press the `enter` key. Then, type `vim` and press the `enter` key.
+Cliquez sur Applications &rarr; Accessoires &rarr; GVim Text Editor, ou pressez `Alt+F2`, tapez `gvim` et validez avec `entrée`.
 
-### Summary
+### En console
 
-From now onwards when we say 'open Vim', use either of the two methods mentioned above.
+#### Windows
 
-> NOTE: When you started Vim, you might have noticed that you can't immediately start typing text. Don't panic, all will be explained in a little while.
+Cliquez sur Démarrer &rarr; Run, tapez `vim` et validez avec `entrée`.
 
-## Graphical or Terminal?
+#### Mac OS X
 
-The graphical version of Vim has menus at the top of the application as well as various options accessible via the mouse, but note that this is completely optional. You can still access all the features of Vim using *only* the keyboard.
+Cliquez sur Finder &rarr; Applications &rarr; Utilities &rarr; Terminal, tapez `vim` et validez avec `entrée`.
 
-Why is this important? Because once a person becomes efficient at typing, using only the keyboard makes the person much faster and less error-prone, as opposed to using the mouse. This is because the hand movement required to switch between the keyboard and the mouse is slow and there is a context switch required in the mind of the person when shifting the hand between the keyboard and the mouse. If we make it a habit to use the keyboard as much as possible, you're saving valuable hand movement.
+#### Linux / BSD
 
-Of course, this is subjective. Some people prefer the mouse and some prefer the keyboard. I encourage you to use the keyboard as much as possible to experience the real power of Vim.
+Pressez `Ctrl+T ` ou cliquez sur Applications &rarr; Accessoires &rarr; Terminal, ou pressez `Alt+F2`, tapez `konsole`/`gnome-terminal` et vamidez avec `entrée`.
+Puis tapez `vim` et pressez `entrée`.
 
-## Introduction to Modes
+### Résumé
 
-Imagine it's a Saturday evening and you're bored of the shows on television. You want to watch an old favorite movie instead. So, you *switch the TV to video mode* so that it shows what the DVD player is displaying instead of the cable channels. Note that the television is still displaying video, but you switch the context on whether you want to watch a DVD or a live television channel.
+A partir de maintenant quand on dira 'ouvrez vim', utilisez la méthode ci-dessus qui vous conviens le mieux.
 
-Similarly, Vim has modes. For example, Vim has a mode for writing text, a mode for
-running commands, etc. They are all related to the main purpose of editing text, but you switch context on whether you want to simply type stuff or you want to run some commands on the text.
+> REMARQUE: En démarrant Vim, vous avez sûrement constaté que vous ne pouviez pas immédiatement taper du texte. Ne paniquez pas, tout sera expliqué dans un petit instant.
 
-Isn't that simple?
+## Environnement graphique ou dans le terminal?
 
-Traditionally, the concept of modes is the most oft-cited reason by beginners on why they find Vim "confusing". I compare it to riding a bicycle - you'll trip a few times, but once you've got the hang of it, you'll wonder what the fuss was all about.
+La version graphique de Vim possède des menus dans le haut et tout autant d'options variées accessible par la souris, mais notez que tout cela est complètement optionnel. Vous pouvez toujours accéder à toutes les fonctionnalités de Vim en n'utilisant *que* le clavier.
 
-So why does Vim have modes? To make things as simple as possible, even though its usage may seem "strange" at first.
+Pourquoi est-ce si important? Parce que lorsqu'une personne devient efficiente en tapant, n'utiliser que le clavier la rend encore plus rapide et moins sujette aux erreurs, contrairement à l'usage de la souris. C'est parce que le mouvement nécessaire pour passer du clavier à la souris est lent et qu'un changement de contexte estnécessaire dans l'esprit de la personne lorsqu'elle déplace la main entre le clavier et la souris. Si nous prenons l'habitude d'utiliser le clavier autant que possible, nous économisons un précieux mouvement de la main.
 
-What do I mean by that? Let's take an example - one of the key goals in Vim is to make it fully accessible from the keyboard without ever having to need to use a mouse (you can still use the mouse if you want to but it is strictly optional). In such a scenario, how would you distinguish between the text you want to write, and the commands that you want to run? Vim's solution is to have a "normal" mode where you can execute commands and an "insert" mode where you are simply writing text. You can switch between the two modes any time. For example, pressing `i` switches Vim to insert mode, and pressing `<Esc>` switches Vim back to normal mode.
+Bien sûr, c'est subjectif. Certains préfèrent la souris et d'autres le clavier. Je vous encourage à utiliser le clavier autant que possible pour faire l'expérience du véritable pouvoir de Vim.
 
-How do traditional editors achieve this distinction between commands and writing text? By using graphical menus and keyboard shortcuts. The problem is that this does not scale. First of all, if you have hundreds of commands, creating menus for each of these commands would be insane and confusing. Secondly, customizing how to use each of these commands would be even more difficult.
+## Introduction aux Modes
 
-Let's take a specific example. Suppose you want to change all occurrences of the word "from" to the word "to" in a document. In a traditional editor, you can run a menu command like Edit &rarr; Replace (or use a keyboard shortcut like `ctrl-r`) and then enter the 'from' word and the 'to' word and then click on 'Replace'. Then, check the 'Replace All' option. In Vim, you simply run `:%s/from/to/g` in the normal mode. The `:s` is the "substitute" command. See how simpler this is?
+Imaginez vous un samedi après-midi, lassé des programmes télé. Vous voulez regarder votre bon vieux film préféré à la place. Donc, vous *basculez la TV en mode vidéo* afin d'avoir accès au lecteur DVD à la place des chaines du cable. Notez que la télévision permet toujours l'affichage de la vidéo, mais vous avez changé le contexte pour savoir si voulez regarder un DVD ou une chaîne en direct.
 
-What if you want to now run this substitution only in the first 10 lines of the text and you want to have a yes/no confirmation for each replacement? In traditional text editors, achieving the yes/no confirmation is easy by unchecking the 'Replace All' option, but notice that you have to first search for this option and then use the mouse to click on the option (or use a long series of keys using the keyboard). But how will you run the Replace for only the first 10 lines? In Vim, you can simply run `:0,10s/from/to/gc`. The new `c` option we are using means we want a 'c'onfirmation message for every replace.
+De façon similaire, Vim a des modes. Par exemple, Vim a un mode pour écrire du texte, un mode pour exécuter des commandes, etc. 
+Ils sont tous dédiés à l'objectif principal d'éditer du texte, mais vous changez le contexte selon que vous voulez simplement taper quelque chose, ou si vous voulez exécuter une commande sur le texte.
 
-By separating the writing (insert) and command (normal) modes, Vim makes it easy for us to switch the two contexts easily.
+N'est-ce pas la simplicité même?
 
-Notice how the first steps to using Vim seem a little "weird", a little "strange", but once you have seen it in action, it starts to make sense. The best part is that these core concepts will help you to understand all you need to know on how to use Vim.
+Traditionnellement, le concept des modes est la raison la plus souvent citée par les débutants sur le pourquoi ils trouvent Vim «déstabilisant». Je compare cela à la bicyclette - vous allez trébucher plusieurs fois, mais une fois que vous avez pris le coup, vous vous demanderez où était le problème.
 
-Since you now understand the difference between normal mode and insert mode, you can look up the various commands you can run in the normal mode, and you can immediately start using them. Compare that to learning new commands in traditional editors which generally means having to read a lot of documentation, searching a lot of menus, a lot of trial and error or plain asking someone for help.
+Alors pourquoi Vim a-t-il des modes? Pour rendre les choses aussi simples que possible, même si son utilisation peut sembler "étrange" au premier abord.
 
-Personally, I find the names of the modes not intuitive to beginners. I prefer calling the insert mode as "writing" mode and the normal mode as "rewriting" mode, but we will stick to the standard Vim terminology to avoid confusion.
+Qu'est-ce que je veux dire par là? Prenons un exemple - l'un des objectifs clés de Vim est de le rendre totalement accessible depuis le clavier sans jamais avoir besoin d'utiliser une souris (vous pouvez toujours utiliser la souris si vous le souhaitez mais c'est strictement optionnel). Dans un tel scénario, comment distingueriez-vous le texte que vous voulez écrire et les commandes que vous voulez exécuter? La solution de Vim est d'avoir un mode "normal" où vous pouvez exécuter des commandes et un mode "insertion" où vous écrivez simplement du texte. Vous pouvez basculer entre les deux modes à tout moment. Par exemple, si vous appuyez sur `i`, Vim passe en mode insertion et si vous appuyez sur `Echap`, Vim revient en mode normal.
 
-> NOTE: All commands in the normal mode should end with the enter key to signal Vim that we have written the full command. So, when we say run `:help vim-modes-intro`, it means you should type `:help vim-modes-intro` and then press the enter key at the end of the command.
 
+Comment les éditeurs traditionnels réalisent-ils cette distinction entre les commandes et l'écriture de texte? En utilisant des menus graphiques et des raccourcis clavier. Le problème est que cela n'est pas adapté. Premièrement, si vous avez des centaines de commandes, créer des menus pour chacune de ces commandes serait insenséet source de confusion. Deuxièmement, personnaliser l'utilisation de chacune de ces commandes serait encore plus difficile.
+
+Prnons un exemple spécifique. Supposons que vous vouliez changer toutes les occurrences du mot "aller" au mot "venir" dans un document. Dans un éditeur traditionnel, vous pouvez exécuter une commande du menu comme Modifier &rarr; Remplacer (ou utiliser un raccourci clavier comme `Ctrl-r`) puis entrer le mot 'aller' et le mot 'venir' puis cliquer sur 'Remplacer'. Ensuite, vous devez encore cocher l'option 'Remplacer tout'. Dans Vim, il suffit d'exécuter `:%s/aller/venir/g` en mode normal. Le `:s` est la commande "remplacer" (substitute). Vous visualisez comment c'est plus simple?
+
+Que se passe-t-il si vous souhaitez maintenant exécuter cette substitution uniquement dans les 10 premières lignes du texte et que vous souhaitez avoir une confirmation oui/non a chaque remplacement? Dans les éditeurs de texte traditionnels, il est facile d'obtenir la confirmation oui/non en décochant l'option 'Remplacer tout', mais notez que vous devez d'abord rechercher cette option puis utiliser la souris pour cliquer dessus (ou utiliser une longue série de les touches en utilisant le clavier). Mais comment allez-vous exécuter le remplacement juste dans les 10 premières lignes? Dans Vim, vous pouvez simplement lancer `:0,10s/aller/venir/gc`. La nouvelle option `c` que nous utilisons signifie que nous voulons un message de 'c'onfirmation pour chaque remplacement.
+
+En séparant les modes d'écriture (insert) et de commande (normal), Vim nous facilite le changement des deux contextes aisément.
+
+Remarquez comment les premières étapes de l'utilisation de Vim semblent un peu "bizarres", un peu "étranges", mais une fois que vous l'avez vu en action, cela commence à avoir du sens. Le meilleur c'est que ces concepts de base vous aideront à comprendre tout ce que vous devez savoir sur la façon d'utiliser Vim.
+
+Puisque vous comprenez maintenant la différence entre le mode normal et le mode insertion, vous pouvez rechercher les différentes commandes que vous pouvez exécuter en mode normal, et vous pouvez immédiatement commencer à les utiliser. Comparez cela à l'apprentissage de nouvelles commandes dans les éditeurs traditionnels, ce qui signifie généralement avoir à lire beaucoup de documentation, à rechercher dans de nombreux menus, beaucoup d'essais et d'erreurs ou à demander de l'aide à quelqu'un.
+
+Personnellement, je trouve que les noms des modes ne sont pas intuitifs pour les débutants. Je préfère appeler le mode d'insertion mode "écriture" et le mode normal mode "correction", mais nous nous en tiendrons à la terminologie Vim standard pour éviter toute confusion.
+
+> REMARQUE: Toutes les commandes en mode normal doivent se terminer par la touche Entrée pour signaler à Vim que nous avons écrit la commande complète. Donc, quand  verrez écrit: `:help vim-modes-intro`, cela signifie que vous devez taper `:help vim-modes-intro` et appuyer sur la touche Entrée à la fin de la commande.
+
+==========A Continuer==========
 ## Writing a file {#write-file}
 
 1. Open Vim. ![](img/first_steps_open.png) 
