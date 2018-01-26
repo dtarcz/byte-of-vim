@@ -1,4 +1,4 @@
-# Premières Étapes
+# Premiers pas
 
 ## Démarrer Vim
 

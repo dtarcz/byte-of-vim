@@ -3,7 +3,7 @@
 * [Préface](preface.md)
 * [Introduction](introduction.md)
 * [Installation](installation.md)
-* [Premières étapes](first_steps.md)
+* [Premiers pas](first_steps.md)
 * [Modes](modes.md)
 * [Compétences dactylographiques](typing_skills.md)
 * [Se déplacer](moving_around.md)

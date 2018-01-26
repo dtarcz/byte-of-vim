@@ -1,83 +1,83 @@
-# Editing Basics
+# Les bases de l'édition de texte
 
-Let's learn the basic editing commands in Vim for reading/writing files, cut/copy/paste, undo/redo and searching.
+Apprenons les commandes d'édition de base dans Vim pour lire/écrire des fichiers, couper/copier/coller, annuler/rétablir et rechercher.
 
-## Reading and writing files
+## Lire et écrire des fichiers
 
-### Buffers
+### Tampons
 
-When you edit a file, Vim brings the text in the file on the hard disk to the computer's RAM. This means that a copy of the file is stored in the computer's memory and any changes you make is changed in the computer's memory and immediately displayed. Once you have finished editing the file, you can save the file which means that Vim writes back the text in the computer's memory to the file on the hard disk. The computer memory used here to store the text temporarily is referred to as a "buffer". Note that this same concept is the reason why we have to "save" files in all editors or word processors that we use.
+Quand vous éditez un fichier, Vim pose le texte de ce fichier dans la mémoire vive (RAM) de l'ordinateur. Cela signifie qu'une copie du fichier est stockée dans la mémoire de l'ordinateur et que toute modification apportée est modifiée dans la mémoire de l'ordinateur et immédiatement affichée. Une fois que vous avez fini d'éditer le fichier, vous pouvez enregistrer le fichier, ce qui signifie que Vim réécrit le texte de la mémoire de l'ordinateur dans le fichier sur le disque dur. La mémoire de l'ordinateur utilisée ici pour stocker temporairement le texte est appelée "tampon". Notez que ce même concept est la raison pour laquelle nous devons "sauvegarder" les fichiers dans tous les éditeurs ou traitements de texte que nous utilisons.
 
-Now open up Vim, write the words `Hello World` and save it as the file `hello.txt`. If you need to remember how to do this, please refer to the [First Steps chapter](./first_steps.md#write-file).
+Maintenant, ouvrez Vim, écrivez les mots `Hello World` et enregistrez-le sous le nom de fichier `hello.txt`. Si vous avez besoin de vous rappeler comment faire, veuillez vous référer au chapitre [Premiers pas](./first_steps.md#write-file).
 
 ### Swap
 
-Now you will notice that another file has been created in the same directory as this file, the file would be named something like `.hello.txt.swp`. Run `:swapname` to find out the exact name of the file.
+Vous remarquerez maintenant qu'un autre fichier a été créé dans le même répertoire que ce fichier, le fichier pourrait se nommer quelque chose comme `.hello.txt.swp`. Exécutez `:swapname` pour trouver le nom exact du fichier.
 
-What is this file? Vim maintains a backup of the buffer in a file which it saves regularly to the hard disk so that in case something goes wrong (like a computer crash or even Vim crashes), you have a backup of the changes you have made since you last saved the original file. This file is called a "swap file" because Vim keeps swapping the contents of the buffer in the computer memory with the contents of this file on the hard disk. See `:help swap-file` to know more details.
+C'est quoi ce fichier? Vim maintient une sauvegarde de la mémoire tampon dans un fichier qu'elle enregistre régulièrement sur le disque dur afin qu'en cas de problème (comme un arrêt brutal de l'ordinateur ou même un crash de Vim), vous ayez une sauvegarde des modifications que vous avez faites depuis votre dernier enregistrement du fichier original. Ce fichier s'appelle un "fichier swap (d'échange - NDT)" parce que Vim garde le contenu du tampon dans la mémoire de l'ordinateur avec le contenu de ce fichier sur le disque dur. Voir `:help swap-file` pour plus de détails.
 
-### Save my file
+### Enregistrer mon fichier
 
-Now that the file has been loaded, let's do a minor editing. Press the ~ key to change the case of the character on which the cursor is positioned. You will notice that Vim now marks the file having been changed (for example a `+` sign shows up in the title bar of the GUI version of Vim). You can open up the actual file in another editor and check that it has not changed yet i.e. Vim has only changed the buffer and not yet saved it to the hard disk.
+Maintenant que le fichier a été chargé, procédons à une modification mineure. Appuyez sur la touche ~ pour changer la casse du caractère sur lequel le curseur est positionné. Vous remarquerez que Vim marque maintenant le fichier qui a été changé (par exemple un signe `+` apparaît dans la barre de titre de la version GUI de Vim). Vous pouvez ouvrir le fichier actuel dans un autre éditeur et vérifier qu'il n'a pas encore changé, c'est-à-dire que Vim n'a modifié que le tampon et ne l'a pas encore enregistré sur le disque dur.
 
-We can write back the buffer to the original file in the hard disk by running `:write`.
+Nous pouvons réécrire le tampon dans le fichier d'origine sur le disque dur en exécutant `:write`.
 
-> NOTE: To make saving easier, add the following line to your vimrc file:
+> REMARQUE: Si vous souhaitez sauvegarder facilement, ajoutez les lignes suivantes dans votre fichier vimrc:
 > <br>
 > ``` viml
-> " To save, ctrl-s.
+> " Pour sauvegarder avec Ctrl+s
 > nmap <c-s> :w<CR>
 > imap <c-s> <Esc>:w<CR>a
 > ```
 > <br>
-> Now you can simply press `ctrl-s` to save the file.
+> Maintenant vous pouvez simplement taper `Ctrl+s` pour enregistrer le fichier.
 
-### Working in my directory
+### Travailler dans mon répertoire
 
-Vim starts up with your home directory as the default directory and all operations will be done within that directory.
+Vim démarre avec votre dossier personnel comme répertoire par défaut et toutes les opérations seront effectuées dans ce dossier.
 
-To open files located in other directories, you can use the full or relative paths such as:
+Pour ouvrir les fichiers situés dans d'autres dossiers, vous pouvez utiliser les chemins complets ou relatifs tels que:
 
 ``` viml
 :e ../tmp/test.txt
-:e C:\\shopping\\monday.txt
+:e C:\\achats\\monday.txt
 ```
 
-Or you can switch Vim to that directory:
+Ou vous pouvez basculer Vim dans ce répertoire:
 
 ``` viml 
 :cd ../tmp
 ```
 
-`:cd` is short for 'c'hange 'd'irectory.
+`:cd` est un raccourci pour  'c'hange 'd'irectory.
 
-To find out the current directory where Vim is looking for files:
+Pour savoir dans quel répertoire Vim va ouvrir les fichiers:
 
 ``` viml
 :pwd
 ```
 
-`:pwd` is short for 'p'rint 'w'orking 'd'irectory.
+`:pwd` est un raccourci pour  'w'orking 'd'irectory.
 
-## Cut, Copy and Paste
+## Couper, Copier, et Coller
 
-As Sean Connery says, in the movie [Finding Forrester](http://www.imdb.com/title/tt0181536/):
+Comme le dit Sean Connery, dans le film [À la rencontre de Forrester (Finding Forrester)](http://www.imdb.com/title/tt0181536/):
 
-> No thinking - that comes later. You must write your first draft with your heart. You rewrite with your head. The first key to writing is... to write, not to think!
+> Ne pas penser - ça vient après. Écrivez votre premier brouillon avec votre coeur. Corrigez avec votre tête. La clef fondamentale pour écrire c'est... d'écrire, pas de penser!
 
-When we rewrite, we frequently rearrange the order of the paragraphs or sentences i.e. we need to be able to cut/copy/paste the text. In Vim, we use a slightly different terminology:
+Lorsque nous révisons, nous réorganisons fréquemment l'ordre des paragraphes ou des phrases, c'est-à-dire que nous devons être en mesure de couper/copier/coller le texte. Dans Vim, nous utilisons une terminologie légèrement différente:
 
-| Desktop world | Vim world | Operation |
+| Monde du PC | Monde de Vim | Opération |
 | --- | --- | --- |
-| cut | delete | `d` |
-| copy | yank | `y` | 
-| paste | paste | `p` |
+| cut (couper) | delete (supprimer) | `d` |
+| copy (copier) | yank (tirer) | `y` | 
+| paste (coller) | paste (coller) | `p` |
 
-In normal desktop terminology, 'cut'ting text means removing the text and putting it into the clipboard. The same operation in Vim means it deletes the text from the file buffer and stores it in a 'register' (a part of the computer's memory). Since we can choose the register where we can store the text, it is referred to as the "delete" operation.
+Dans la terminologie de l'ordinateur de bureau (PC) normale, 'cut' (découper) du texte signifie enlever le texte et le mettre dans le presse-papiers. La même opération dans Vim signifie qu'il supprime le texte du tampon de fichiers et le stocke dans un 'registre' (une partie de la mémoire de l'ordinateur). Puisque nous pouvons choisir le registre où nous pouvons stocker le texte, il y est fait référence en tant qu'opération "supprimer".
 
-Similarly, in normal desktop terminology, 'copy' text means that a copy of the text is placed on the clipboard. Vim does the same, it "yanks" the text and places it in a register.
+De même, dans la terminologie bureautique normale, 'copier' du texte signifie qu'une copie du texte est placée dans le presse-papiers. Vim fait pareil, il "tire" le texte et le place dans un registre.
 
-"Paste" means the same in both terminologies.
+"Coller" veut dire pareil dans les 2 terminologies.
 
 We have seen how you can do cut/copy/paste operations in Vim. But how do you specify which text that these operations should work on? Well, we have already explored that in the previous [Text Objects section](./moving_around.md#text-objects).
 
