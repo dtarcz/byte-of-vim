@@ -1,10 +1,11 @@
-# Charityware
-Vim is "charityware". If you find Vim useful, you are encouraged to help the [ICCF Holland foundation](http://iccf-holland.org) in any way you can.
+# Bienfaisance
 
-From their website:
+Vim est un "outil de bienfaisance". Si vous trouvez Vim utile, vous êtes encouragé à aider la [Fondation ICCF Hollande](http://iccf-holland.org) de la façon qui vous convienne.
+
+Depuis leur site:
     
-    The south of Uganda has been suffering from the highest HIV infection rate in the world. Parents die of AIDS, just when their children need them most. An extended family can be their new home. Fortunately there is enough food in this farming district. But who will pay their school fees, provide medical aid and help them grow up? That is where ICCF Holland helps in the hope that they will be able to take care of themselves, and their children, in the long run.
+	Le Sud de l'Ouganda souffre du taux d'infection par le VIH le plus élevé au monde. Les parents meurent du sida, juste au moment où leurs enfants en ont le plus besoin. Une famille élargie peut être leur nouvelle maison. Heureusement, il y a assez de nourriture dans cette région agricole. Mais qui va payer leurs frais de scolarité, fournir une aide médicale et les aider à grandir? C'est là qu'intervient ICCF Hollande dans l'espoir qu'ils pourront prendre soin d'eux-mêmes et de leurs enfants, à long terme.
 
-Details on ICCF can be found in Vim by running `:help iccf`.
+Vous pouvez trouver des détails sur l'ICCF dans Vim en tapant `:help iccf`.
 
-You can [sponsor Vim development](http://www.vim.org/sponsor/faq.php) by making a monetary donation and becoming a Vim registered user; you get to vote on what new features will be added to Vim!
+Vous pouvez [aider au développement de vim](http://www.vim.org/sponsor/faq.php) en faisant un don et devenir un utilisateur vim enregistré; vous aurez votre voix pour les ajouts de nouvelles fonctionnalités dans vim!
