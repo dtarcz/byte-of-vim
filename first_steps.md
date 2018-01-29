@@ -79,46 +79,45 @@ Personnellement, je trouve que les noms des modes ne sont pas intuitifs pour les
 
 > REMARQUE: Toutes les commandes en mode normal doivent se terminer par la touche Entrée pour signaler à Vim que nous avons écrit la commande complète. Donc, quand  verrez écrit: `:help vim-modes-intro`, cela signifie que vous devez taper `:help vim-modes-intro` et appuyer sur la touche Entrée à la fin de la commande.
 
-==========A Continuer==========
-## Writing a file {#write-file}
+## Écrire un fichier {#write-file}
 
-1. Open Vim. ![](img/first_steps_open.png) 
-2. Type `:edit hello.txt` and press the enter key. ![](img/first_steps_edit.png) 
-3. Press `i` to switch to insert mode. ![](img/first_steps_insert.png) 
-4. Type the text `Hello World`. ![](img/first_steps_type.png) 
-5. Press the `<Esc>` key. ![](img/first_steps_normal.png) 
-6. Type `:write` and press the `enter` key. ![](img/first_steps_write.png) 
-7. Close Vim by running `:quit`. ![](img/first_steps_quit.png) 
+1. Ouvrez Vim. ![](img/first_steps_open.png) 
+2. Tapez `:edit salut.txt` et pressez la touche entrée. ![](img/first_steps_edit.png) 
+3. Pressez `i` pour passer en mode insertion. ![](img/first_steps_insert.png) 
+4. Tapez le texte `Salut Monde`. ![](img/first_steps_type.png) 
+5. Pressez la touche `<Echap>`. ![](img/first_steps_normal.png) 
+6. Tapez `:write` et pressez la touche `entrée`. ![](img/first_steps_write.png) 
+7. Fermez Vim en exécutant `:quit`. ![](img/first_steps_quit.png) 
 
-Congratulations! You just wrote your first file using Vim :-).
+Félicitation! Vous venez juste d'écrire votre premier fichier avec Vim :-).
 
-Does this seem like a lot of steps? Yes, it does, *at first*. That is because this is the first time we are getting used to opening Vim, writing a file and closing Vim. You have to keep in mind that this will only be a minor part of your time compared to the actual time that goes into in editing the content of the document.
+Est-ce qu'il semble y avoir beaucoup d'étapes? Tout à fait, *au début*. C'est parce que c'est la première fois que nous nous habituons à ouvrir Vim, à écrire un fichier et à fermer Vim. Vous devez garder à l'esprit que cela ne sera qu'une partie mineure de votre temps par rapport au temps réel qui est consacré à la modification du contenu du document.
 
-Let us see what the above commands do.
+Voyons ce que font les commandes suivantes.
 
-- `:edit hello.txt` or simply `:e hello.txt`
-  - This opens a file for editing. If the file with the specified name does not exist, it will be created the first time we "save" the file.
-- Press `i`
-  - This switches Vim to the insert mode
-- Type the text `Hello World`
-  - This is where you type the actual text that you want to write.
-- Press `<Esc>`
-  - This escapes Vim back to normal mode
-- `:write` or simply `:w`
-  - This tells Vim to *w*rite the text (which is currently stored in the computer's memory) to the file on the hard disk. This means that whatever we wrote so far is now permanently stored.
-- `:quit` or simply `:q`
-  - This tells Vim to quit the file in the "window" that we are editing. If there was only one "window" open, this will also close Vim (Concept of windows will be discussed in a later chapter). <!-- TODO: Convert this to a link -->
+- `:edit hello.txt` ou simplement `:e hello.txt`
+   - Ouvre un fichier pour édition. Si le fichier avec le nom spécifié n'existe pas, il sera créé la première fois que nous "save" (sauvegardons) le fichier.
+- Appuyez sur `i`
+   - Ceci passe Vim en mode insertion
+- Tapez le texte `Hello World`
+   - C'est là que vous tapez le texte que vous voulez écrire.
+- Appuyez sur `<Échap>`
+   - Cela permet à Vim de revenir en mode normal
+- `:write` ou simplement `:w`
+   - Ceci indique à Vim de *w* enregistrer (écrire) le texte (qui est actuellement stocké dans la mémoire de l'ordinateur) dans le fichier sur le disque dur. Cela signifie que tout ce que nous avons écrit jusqu'ici est maintenant stocké de façon permanente.
+- `:quit` ou simplement `:q`
+   - Ceci indique à Vim de *q*uitter le fichier dans la "fenêtre" que nous sommes en train d'éditer. S'il n'y avait qu'une seule "fenêtre" ouverte, cela fermera aussi Vim (le Concept des fenêtres sera discuté dans un chapitre ultérieur). <!-- A FAIRE: Convertir ceci en un lien -->
 
-Try to repeat this process a few times with different file names, different text, etc. so that you get used to the basic set of steps in using Vim.
+Essayez de répéter ce processus plusieurs fois avec différents noms de fichiers, différents textes, etc. afin de vous familiariser avec les étapes de base de l'utilisation de Vim.
 
-Notice that when you are in insert mode, Vim displays `-- INSERT --` at the bottom left corner. When you switch to normal mode, it will not display anything. This is because normal mode is the *default* mode in which Vim runs.
+Notez que lorsque vous êtes en mode insertion, Vim affiche `-- INSERTION --` dans le coin inférieur gauche. Lorsque vous passez en mode normal, il n'affiche rien. C'est parce que le mode normal est le mode *par défaut* dans lequel Vim s'exécute.
 
-Take some time to soak in this information, this is probably the hardest lesson there is to learn about Vim, the rest is easy :)
+Prenez le temps de vous imprégner de cette information, c'est probablement la leçon la plus difficile à apprendre sur Vim, le reste est facile :)
 
-And don't worry, help is not too far away. Actually, it's just a `:help` command away. For example, run `:help :edit` and you'll see the documentation open up. Go ahead, try it.
+Et ne vous inquiétez pas, l'aide n'est pas très loin. En fait, c'est juste la commande `:help`. Par exemple, lancez `:help :edit` et vous verrez la documentation s'ouvrir. Allez-y, essayez.
 
-## Summary
+## Résumé
 
-We have now discussed the basic concepts and usage of Vim. See `:help notation` and `:help keycodes` also.
+Nous avons maintenant abordé les concepts de base et la façon d'utiliser Vim. Voir `:help notation` et `:help keycodes` aussi.
 
-Be sure to understand these concepts well. Once you start "thinking in Vim", understanding the rest of Vim's features is easy.
+Assurez-vous de bien comprendre ces concepts. Une fois que vous commencez à "penser comme Vim", il est aisé de comprendre le reste des fonctionnalités de Vim.
