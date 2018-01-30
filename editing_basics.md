@@ -79,92 +79,95 @@ De même, dans la terminologie bureautique normale, 'copier' du texte signifie q
 
 "Coller" veut dire pareil dans les 2 terminologies.
 
-We have seen how you can do cut/copy/paste operations in Vim. But how do you specify which text that these operations should work on? Well, we have already explored that in the previous [Text Objects section](./moving_around.md#text-objects).
+Nous avons vu comment vous pouvez faire des opérations couper/copier/coller dans Vim. Mais comment spécifiez-vous le texte sur lequel ces opérations devraient fonctionner? Eh bien, nous avons déjà vu cela dans la précédente section [Objets Textes](./moving_around.md#text-objects).
 
-Combining the operation notation and the text object notation means we have innumerable ways of manipulating the text. Let's see a few examples.
+Combiner la notation d'opération et la notation d'objet texte signifie que nous avons d'innombrables manières de manipuler le texte. Voyons quelques exemples.
 
-Write this text in Vim (exactly as shown):
+Ecrivez ce texte dans Vim (exactement comme indiqué):
 
-> This is the rthe first paragraph. <br>
-> This is the second line. <br>
+> Ceci est le mle premier paragraphe. <br>
+> Ceci est la deuxième ligne. <br>
 > <br>
-> This is the second paragraph. <br>
+> Ceci est le second paragraphe. <br>
 
-Place the cursor at the topmost leftmost position, by pressing `1G` and `|` that moves to the first line and the first column respectively.
+Placez le curseur à la position la plus en haut à gauche, en appuyant sur `1G` et `|` qui se déplace vers la première ligne et la première colonne respectivement
 
-Let's see the first case: We have typed an extra 'r' which we have to remove. Press `3w` to move forward by 3 words.
+Voyons le premier cas: Nous avons tapé un 'm' supplémentaire que nous devons supprimer. Tapez `3w` pour avancer de 3 mots.
 
-Now, we need to delete one character at the current cursor position.
+Maintenant, on doit effacer 1 caractère là où est positionné le curseur.
 
-Note that there are two parts to this:
+Remarquez qu'il y a 2 parties à cela:
 
-| Operation | Text Object / Motion |
+| Opération | Objet Texte / Mouvement |
 | --- | --- |
-| Delete | One character at current cursor position |
+| Efface | 1 caractère à la position courante du curseur |
 | `d` | `l` |
 
-So, we have to just press `dl` and we delete one character! Notice that we can use `l` even though it is a motion.
+Donc, nous avons juste à taper `dl` et nous effaçons 1 caractère! Notez que nous pouvons utiliser `l` même si c'est un mouvement.
 
-Now we notice that the whole word is redundant because we have "the" twice. Now think carefully on what should be fastest key combination to fix this?
+Maintenant on remarque que le mot corrigé est redondant, car on a 2 fois "le". Réfléchissez maintenant attentivement à la combinaison de touche qui serait la plus rapide pour corriger ça?
 
-Take some time to think and figure this out for yourself. Take your time. Now read on.
+Prenez un peu de temps pour y penser et comprenez par vous même. Prenez votre temps. Maintenant, lisez la suite.
 
-| Operation | Text Object / Motion |
+| Opération | Objet Texte / Mouvement |
 | --- | --- |
-| Delete | Word |
+| Efface | Mot |
 | `d` | `w` |
 
-So, press `dw` and you delete a word. Voila! So simple and so beautiful. The beauty is that such simple concepts can be combined to provide such a rich range of possibilities.
+Donc, tapez `dw` et vous effacez un mot. Done! Si simple et si beau. La beauté réside dans le fait que ces concepts simples peuvent être combinés pour offrir une gamme de possibilités infiniment riche.
 
-How do we achieve the same operation for lines? Well, lines are considered special in Vim because lines are usually how we think about our text. As a shortcut, if you repeat the operation name twice, it will operate on the line. So, dd will delete the current line and yy will yank the current line.
+Comment effectuer la même opération pour les lignes? Et bien, les lignes sont considérées comme spéciales dans Vim parce que les lignes sont notre façon de penser le texte. Vite dit, si vous répétez le nom d'une opération 2 fois, elle agira sur le ligne. Donc `dd` effacera la ligne courante et `yy` copiera la ligne courante.
 
-Our example text in Vim should now look like this:
+Notre texte d'exemple dans Vim devrait maintenant ressembler à ceci:
 
-> This is the first paragraph. <br>
-> This is the second line. <br>
+> Ceci est le premier paragraphe. <br>
+> Ceci est la deuxième ligne. <br>
 > <br>
-> This is the second paragraph.
+> Ceci est le second paragraphe. <br>
 
-Go to the second line by pressing `j`. Now press `dd` and the line should be deleted. You should now see:
+Allez à la 2me ligne en tapant `j`. Maintenant, tapez `dd` et la ligne sera effacée. Vous devriez maintenant voir:
 
-> This is the first paragraph. <br>
+> Ceci est le premier paragraphe. <br>
 > <br>
-> This is the second paragraph.
+> Ceci est le second paragraphe. <br>
 
-Let's see a bigger case: How do we yank the current paragraph?
+Voyons voir un cas plus grand: Comment copier le paragraphe courant?
 
-| Operation | Text Object / Motion |
+| Opération | Objet Text Objecte / Mouvement |
 | --- | --- |
-| Yank | A Paragraph |
+| Copier | Le Paragraphe |
 | `y` | `ap` |
 
-So, `yap` will copy the current paragraph.
+Donc, `yap` copierai le paragraphe.
 
-Now that we have done copying the text, how do we paste it? Just `p` it.
+Maintenant qu'on a copié le texte, comment le colle t-on? Juste en le `p`étant.
 
-You should now see:
+Maintenant vous devriez avoir sous les yeux:
 
-> This is the first paragraph. <br>
-> This is the first paragraph. <br>
+> Ceci est le premier paragraphe. <br>
+> Ceci est le premier paragraphe. <br>
 > <br>
 > <br>
-> This is the second paragraph.
+> Ceci est le second paragraphe. <br>
 
-Notice that the blank line is also copied when we do yap, so p adds that extra blank line as well.
+Notez que la ligne vide a aussi été copiée lorsque nous avons fait yap, donc p ajoute cette ligne vide supplémentaire aussi.
 
-There are two types of paste that can be done exactly like the two types of inserts we have seen before:
+Il y a 2 façons de coller qui peuvent être réalisés de la même façon que les 2 façon d'insérer que nous avons vu précédemment:
 
-| Key | Mnemonic |
+==========faire rappel vers https://github.com/dtarcz/byte-of-vim/blob/master/modes.md#insert-mode==========
+
+| Clef | Mnémonique |
 | --- | --- |
-| `p` | paste after current cursor position |
-| `P` | paste before current cursor position |
+| `p` | coller après la position courante du curseur |
+| `P` | coller avant la position courante du curseur |
 
-Taking the idea further, we can combine these into more powerful ways.
+En poussant cette idée plus loin, nous pouvons combiner tout cela dans des façon de faire encore plus puissantes.
 
-How to swap two characters? Press `xp`.
+Comment interchanger 2 caractères? Tapez `xp`.
 
-- `x` &rarr; delete one character at current cursor position
-- `p` &rarr; paste after current cursor position
+- `x` &rarr; efface 1 caractère sous le curseur
+- `p` &rarr; colle après le curseur
+==========continuer==========
 
 How to swap two words? Press `dwwP`.
 
