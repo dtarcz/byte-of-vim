@@ -8,7 +8,7 @@ Voyons les différentes façons de trouver de l'aide sur la façon d'utiliser Vi
 
 ## La commande `:help`
 
-Le premier et plus important endroit où chercher de l'aide est la documentation intégrée et Vim a l'un des manuels d'utilisation les plus complets et compréhensble que j'ai jamais vus.
+Le premier et plus important endroit où chercher de l'aide est la documentation intégrée et Vim a l'un des manuels d'utilisation les plus complets et compréhensible que j'ai jamais vus.
 
 Dans notre cas, exécutez simplement `:help abbreviation` et vous serez amené à l'aide pour les abréviations et vous pourrez lire comment utiliser les commandes `:ab` and `:iab`.
 
