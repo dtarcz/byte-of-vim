@@ -1,13 +1,9 @@
-# Feedback
-This book is a work-in-progress. Your feedback is essential to improving the book. So, please do [send in your comments](http://www.swaroopch.com/contact/).
+# Retour 
+Ce livre est en cours d'édition. Vos retours sont essentiels pour l'améliorer. Merci de bien vouloir [envoyer vos commentaires](http://www.swaroopch.com/contact/).
 
-This book is also available on its official website as a wiki so go ahead and [fix things yourself](http://www.swaroopch.com/notes/Vim) as well!
+Ce livre est également disponible sur son site web en tant que wiki donc vous pouvez [changer vous-même des choses](http://www.swaroopch.com/notes/Vim) aussi!
 
-Known Gaps are:
+Les lacunes connues sont:
 
-* Inconsistent use of examples
-* Current strength is the later chapters (for experienced Vimmers) as opposed to the beginners' chapters.
-
-
-
-
+* Utilisation incohérente d'exemples
+* La force actuelle sont les chapitres suivants (pour Vimmers expérimentés) par opposition aux chapitres pour les débutants.
